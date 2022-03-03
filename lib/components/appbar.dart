@@ -15,7 +15,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
   if (width < 860) {
     return AppBar(
       title: Image.asset(
-        '../../assets/logo.png',
+        'assets/logo.png',
         scale: 1.8,
       ),
       actions: [
@@ -91,7 +91,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
         child: Row(
           children: [
             Image.asset(
-              '../../assets/logo.png',
+              'assets/logo.png',
               scale: 1.8,
             ),
             const SizedBox(

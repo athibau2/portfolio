@@ -66,35 +66,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/logo.png
-    - assets/profile.png
-    - assets/icons/eureka-logo.png
-    - assets/icons/firebase-logo.png
-    - assets/icons/flutter-logo.png
-    - assets/icons/node-logo.png
-    - assets/icons/postgres-logo.png
-    - assets/icons/typescript-logo.png
-    - assets/byu-logo.png
-    - assets/creators.png
-    - assets/icons/vue-logo.png
-    - assets/icons/javascript-logo.png
-    - assets/wya.png
-    - assets/icons/cpp-logo.png
-    - assets/icons/data-structures.png
-    - assets/icons/discrete-math.png
-    - assets/icons/oop.png
-    - assets/icons/web-dev.png
-    - assets/icons/nuxt.png
-    - assets/icons/database.png
-    - assets/icons/expressjs.png
-    - assets/icons/ExpressJS-logo.png
-    - assets/aws.png
-    - assets/icons/dart.png
-    - assets/icons/github.png
-    - assets/icons/sql.png
-    - assets/icons/html-css.png
-    - assets/sava.png
-    - assets/icons/npm.png
+    - assets/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

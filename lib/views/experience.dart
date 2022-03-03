@@ -43,7 +43,7 @@ class Experience extends StatelessWidget {
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              image: NetworkImage('../../assets/icons/eureka-logo.png'),
+                              image: NetworkImage('assets/icons/eureka-logo.png'),
                               fit: BoxFit.contain
                           ),
                         ),
@@ -79,15 +79,15 @@ class Experience extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Image.asset("../../assets/icons/flutter-logo.png", scale: 3,),
+                                    Image.asset("assets/icons/flutter-logo.png", scale: 3,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/typescript-logo.png", scale: 3,),
+                                    Image.asset("assets/icons/typescript-logo.png", scale: 3,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/node-logo.png", scale: 2,),
+                                    Image.asset("assets/icons/node-logo.png", scale: 2,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/postgres-logo.png", scale: 1,),
+                                    Image.asset("assets/icons/postgres-logo.png", scale: 1,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/firebase-logo.png", scale: 3,),
+                                    Image.asset("assets/icons/firebase-logo.png", scale: 3,),
                                   ],
                                 ),
                               ),
@@ -133,9 +133,9 @@ class Experience extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Image.asset("../../assets/icons/flutter-logo.png", scale: 3,),
+                                    Image.asset("assets/icons/flutter-logo.png", scale: 3,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/firebase-logo.png", scale: 3,),
+                                    Image.asset("assets/icons/firebase-logo.png", scale: 3,),
                                   ],
                                 ),
                               ),
@@ -148,7 +148,7 @@ class Experience extends StatelessWidget {
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              image: NetworkImage('../../assets/sava.png'),
+                              image: NetworkImage('assets/sava.png'),
                               fit: BoxFit.contain
                           ),
                         ),
@@ -169,7 +169,7 @@ class Experience extends StatelessWidget {
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              image: NetworkImage('../../assets/profile.png'),
+                              image: NetworkImage('assets/profile.png'),
                               fit: BoxFit.contain
                           ),
                         ),
@@ -205,15 +205,15 @@ class Experience extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Image.asset("../../assets/icons/vue-logo.png", scale: 55,),
+                                    Image.asset("assets/icons/vue-logo.png", scale: 55,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/javascript-logo.png", scale: 6.2,),
+                                    Image.asset("assets/icons/javascript-logo.png", scale: 6.2,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/node-logo.png", scale: 2,),
+                                    Image.asset("assets/icons/node-logo.png", scale: 2,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/postgres-logo.png", scale: 1,),
+                                    Image.asset("assets/icons/postgres-logo.png", scale: 1,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/firebase-logo.png", scale: 3,),
+                                    Image.asset("assets/icons/firebase-logo.png", scale: 3,),
                                   ],
                                 ),
                               ),
@@ -280,7 +280,7 @@ class Experience extends StatelessWidget {
                           color: Colors.white,
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              image: NetworkImage('../../assets/creators.png'),
+                              image: NetworkImage('assets/creators.png'),
                               fit: BoxFit.contain
                           ),
                         ),
@@ -310,7 +310,7 @@ class Experience extends StatelessWidget {
                           color: Colors.transparent,
                           shape: BoxShape.rectangle,
                           image: DecorationImage(
-                              image: NetworkImage('../../assets/wya.png'),
+                              image: NetworkImage('assets/wya.png'),
                               fit: BoxFit.fitHeight
                           ),
                         ),
@@ -345,11 +345,11 @@ class Experience extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Image.asset("../../assets/icons/flutter-logo.png", scale: 3,),
+                                    Image.asset("assets/icons/flutter-logo.png", scale: 3,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/postgres-logo.png", scale: 1,),
+                                    Image.asset("assets/icons/postgres-logo.png", scale: 1,),
                                     const SizedBox(width: 10,),
-                                    Image.asset("../../assets/icons/firebase-logo.png", scale: 3,),
+                                    Image.asset("assets/icons/firebase-logo.png", scale: 3,),
                                   ],
                                 ),
                               ),
