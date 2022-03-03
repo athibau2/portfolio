@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(height: 20,),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.65,
+                  height: MediaQuery.of(context).size.height * 0.67,
                   width: MediaQuery.of(context).size.width * 0.85,
                   child: CupertinoScrollbar(
                     controller: _scrollController,
