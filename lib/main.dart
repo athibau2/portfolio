@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'views/home.dart';
 import 'views/education.dart';
 import 'views/experience.dart';
 import 'views/contact_me.dart';
-import 'package:resize/resize.dart';
 
 void main() {
   runApp(const MyApp());
