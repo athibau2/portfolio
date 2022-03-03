@@ -96,6 +96,36 @@ flutter:
     - assets/sava.png
     - assets/icons/npm.png
 
+    - build/flutter_assets/assets/logo.png
+    - build/flutter_assets/assets/profile.png
+    - build/flutter_assets/assets/icons/eureka-logo.png
+    - build/flutter_assets/assets/icons/firebase-logo.png
+    - build/flutter_assets/assets/icons/flutter-logo.png
+    - build/flutter_assets/assets/icons/node-logo.png
+    - build/flutter_assets/assets/icons/postgres-logo.png
+    - build/flutter_assets/assets/icons/typescript-logo.png
+    - build/flutter_assets/assets/byu-logo.png
+    - build/flutter_assets/assets/creators.png
+    - build/flutter_assets/assets/icons/vue-logo.png
+    - build/flutter_assets/assets/icons/javascript-logo.png
+    - build/flutter_assets/assets/wya.png
+    - build/flutter_assets/assets/icons/cpp-logo.png
+    - build/flutter_assets/assets/icons/data-structures.png
+    - build/flutter_assets/assets/icons/discrete-math.png
+    - build/flutter_assets/assets/icons/oop.png
+    - build/flutter_assets/assets/icons/web-dev.png
+    - build/flutter_assets/assets/icons/nuxt.png
+    - build/flutter_assets/assets/icons/database.png
+    - build/flutter_assets/assets/icons/expressjs.png
+    - build/flutter_assets/assets/icons/ExpressJS-logo.png
+    - build/flutter_assets/assets/aws.png
+    - build/flutter_assets/assets/icons/dart.png
+    - build/flutter_assets/assets/icons/github.png
+    - build/flutter_assets/assets/icons/sql.png
+    - build/flutter_assets/assets/icons/html-css.png
+    - build/flutter_assets/assets/sava.png
+    - build/flutter_assets/assets/icons/npm.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
