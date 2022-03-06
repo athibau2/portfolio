@@ -52,6 +52,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
                 },
               ),
             ),
+            const PopupMenuDivider(),
             PopupMenuItem<ElevatedButton>(
               child: ElevatedButton(
                 child: const Text("Experience"),
@@ -61,6 +62,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
                 },
               ),
             ),
+            const PopupMenuDivider(),
             PopupMenuItem<ElevatedButton>(
               child: ElevatedButton(
                 child: const Text("Education"),
@@ -70,6 +72,7 @@ PreferredSizeWidget buildAppBar(BuildContext context) {
                 },
               ),
             ),
+            const PopupMenuDivider(),
             PopupMenuItem<ElevatedButton>(
               child: ElevatedButton(
                 child: const Text("Contact Me"),

@@ -32,14 +32,108 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
+  Widget introLarge(BuildContext context, double width) {
+    return Row(
+      children: [
+        Container(
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+                image: NetworkImage('assets/profile.png'),
+                fit: BoxFit.contain
+            ),
+          ),
+          height: 250,
+          width: 250,
+        ),
+        const SizedBox(width: 10,),
+        Container(
+          decoration: listDecoration,
+          width: width * 0.7,
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                SingleChildScrollView(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Hello! My name is Andrew Thibaudeau",
+                        style: Theme.of(context).textTheme.headline4,),
+                    ],
+                  ),
+                  scrollDirection: Axis.horizontal,
+                ),
+                Divider(),
+                Text(intro,
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget introSmall(BuildContext context, double width) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+                image: NetworkImage('assets/profile.png'),
+                fit: BoxFit.contain
+            ),
+          ),
+          height: 250,
+          width: 250,
+        ),
+        const SizedBox(height: 10,),
+        Container(
+          decoration: listDecoration,
+          width: width * 0.7,
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                SingleChildScrollView(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Hello! My name is Andrew Thibaudeau",
+                        style: Theme.of(context).textTheme.headline6,),
+                    ],
+                  ),
+                  scrollDirection: Axis.horizontal,
+                ),
+                Divider(),
+                Text(intro,
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: buildAppBar(context),
       body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+        height: height,
+        width: width,
         decoration: backgroundDecoration,
         child: ListView(
           scrollDirection: Axis.vertical,
@@ -50,55 +144,19 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   decoration: pageBar,
                   alignment: Alignment.center,
-                  height: MediaQuery.of(context).size.height  * 0.1125,
-                  width: MediaQuery.of(context).size.width,
-                  child: Text("HOME", style: Theme.of(context).textTheme.headline3,),
+                  height: height  * 0.1125,
+                  width: width,
+                  child: Text("HOME",
+                    style: (width < 860)
+                      ? Theme.of(context).textTheme.headline4
+                      : Theme.of(context).textTheme.headline3,),
                 ),
                 SingleChildScrollView(
                   padding: EdgeInsets.all(30),
                   scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                              image: NetworkImage('assets/profile.png'),
-                              fit: BoxFit.contain
-                          ),
-                        ),
-                        height: 250,
-                        width: 250,
-                      ),
-                      const SizedBox(width: 10,),
-                      Container(
-                        decoration: listDecoration,
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        alignment: Alignment.topLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Column(
-                            children: [
-                              SingleChildScrollView(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text("Hello! My name is Andrew Thibaudeau",
-                                      style: Theme.of(context).textTheme.headline4,),
-                                  ],
-                                ),
-                                scrollDirection: Axis.horizontal,
-                              ),
-                              Divider(),
-                              Text(intro,
-                                style: Theme.of(context).textTheme.headline6,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: (width < 860) ?
+                      introSmall(context, width)
+                      : introLarge(context, width)
                 ),
                 CarouselSlider(
                   options: CarouselOptions(
@@ -132,25 +190,32 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   decoration: pageBar,
                   alignment: Alignment.center,
-                  height: MediaQuery.of(context).size.height  * 0.1125,
-                  width: MediaQuery.of(context).size.width,
-                  child: Text("SKILLS", style: Theme.of(context).textTheme.headline3,),
+                  height: height * 0.1125,
+                  width: width,
+                  child: Text("SKILLS",
+                    style: (width < 860)
+                        ? Theme.of(context).textTheme.headline4
+                        : Theme.of(context).textTheme.headline3,),
                 ),
                 const SizedBox(height: 20,),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.67,
-                  width: MediaQuery.of(context).size.width * 0.85,
+                  height: (width < 860)
+                    ? height * 0.9
+                    : height * 0.66,
+                  width: (width < 860) ? width * 0.5 : width * 0.85,
                   child: CupertinoScrollbar(
                     controller: _scrollController,
                     child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
+                      scrollDirection: (width < 860) ? Axis.vertical : Axis.horizontal,
                       controller: _scrollController,
                       physics: BouncingScrollPhysics(),
                       itemCount: skillList.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
-                          height: MediaQuery.of(context).size.height,
-                          width: MediaQuery.of(context).size.width * 0.25,
+                          height: (width < 860)
+                              ? height * 0.61
+                              : height,
+                          width: 320, /// MediaQuery.of(context).size.width * 0.25
                           child: Card(
                             elevation: 6,
                             color: Colors.white70,
@@ -160,20 +225,22 @@ class _HomePageState extends State<HomePage> {
                                 scrollDirection: Axis.vertical,
                                 child: Column(
                                   children: <Widget>[
-                                    Row(
-                                      children: [
-                                        IconButton(
-                                          onPressed: () async {
-                                            if (!await launch(skillList[index].url)) {
-                                              throw 'Could not launch ${skillList[index].url}';
-                                            }
-                                          },
-                                          icon: Image.asset(skillList[index].image),
-                                          iconSize: 55,
-                                        ),
-                                        Text(skillList[index].title, style: Theme.of(context).textTheme.headline4),
-                                      ],
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        children: [
+                                          IconButton(
+                                            onPressed: () async {
+                                              if (!await launch(skillList[index].url)) {
+                                                throw 'Could not launch ${skillList[index].url}';
+                                              }
+                                            },
+                                            icon: Image.asset(skillList[index].image),
+                                            iconSize: 55,
+                                          ),
+                                          Text(skillList[index].title, style: Theme.of(context).textTheme.headline4),
+                                        ],
+                                      ),
                                     ),
                                     const Divider(thickness: 1,),
                                     Container(

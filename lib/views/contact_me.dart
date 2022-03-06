@@ -13,7 +13,6 @@ class ContactMe extends StatefulWidget {
 
 class _ContactMeState extends State<ContactMe> {
   final _nameController = TextEditingController();
-  final _emailController = TextEditingController();
   final _subjectController = TextEditingController();
   final _messageController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
@@ -21,11 +20,14 @@ class _ContactMeState extends State<ContactMe> {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: buildAppBar(context),
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        width: width,
+        height: height,
         decoration: backgroundDecoration,
         child: SingleChildScrollView(
           child: Column(
@@ -34,67 +36,47 @@ class _ContactMeState extends State<ContactMe> {
               Container(
                 decoration: pageBar,
                 alignment: Alignment.center,
-                height: MediaQuery.of(context).size.height  * 0.1125,
-                width: MediaQuery.of(context).size.width,
-                child: Text("CONTACT ME", style: Theme.of(context).textTheme.headline3,),
+                height: height  * 0.1125,
+                width: width,
+                child: Text("CONTACT ME",
+                  style: (width < 860)
+                    ? Theme.of(context).textTheme.headline4
+                    : Theme.of(context).textTheme.headline3,),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10, bottom: 10),
                 child: Text("Inquire Here",
-                    style: Theme.of(context).textTheme.headline4
+                    style: (width < 860)
+                      ? Theme.of(context).textTheme.headline5
+                      : Theme.of(context).textTheme.headline4,
                 ),
               ),
               Form(
                 key: _formKey,
                 child: Container(
                   //color: Colors.white,
-                  width: MediaQuery.of(context).size.width * 0.4,
+                  width: (width < 860)
+                    ? width * 0.6
+                    : width * 0.4,
                   child: Column(
                     children: <Widget>[
-                      Row(
-                        children: [
-                          Expanded(
-                            child: TextFormField(
-                              controller: _nameController,
-                              keyboardType: TextInputType.text,
-                              onChanged: (value) {},
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return "Please enter your name";
-                                }
-                              },
-                              textAlign: TextAlign.left,
-                              decoration: kTextFieldDecoration.copyWith(
-                                hintText: 'Name',
-                                prefixIcon: const Icon(
-                                  Icons.person,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
+                      TextFormField(
+                        controller: _nameController,
+                        keyboardType: TextInputType.text,
+                        onChanged: (value) {},
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "Please enter your name";
+                          }
+                        },
+                        textAlign: TextAlign.left,
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Name',
+                          prefixIcon: const Icon(
+                            Icons.person,
+                            color: Colors.black,
                           ),
-                          const SizedBox(width: 2,),
-                          Expanded(
-                            child: TextFormField(
-                              controller: _emailController,
-                              keyboardType: TextInputType.emailAddress,
-                              onChanged: (value) {},
-                              validator: (value) {
-                                if (value!.isEmpty) {
-                                  return "Please enter your email";
-                                }
-                              },
-                              textAlign: TextAlign.left,
-                              decoration: kTextFieldDecoration.copyWith(
-                                hintText: 'Email',
-                                prefixIcon: const Icon(
-                                  Icons.email,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                       const SizedBox(height: 2,),
                       TextFormField(
@@ -138,31 +120,49 @@ class _ContactMeState extends State<ContactMe> {
                         ),
                       ),
                       const SizedBox(height: 4,),
-                      ElevatedButton.icon(
-                        onPressed: () async {
-                          final mailtoLink = Mailto(
-                          to: ['a.thibs98@gmail.com'],
-                          cc: ['thibaudeauapps@gmail.com'],
-                          subject: 'From: ${_nameController.text}: ${_subjectController.text}',
-                          body: _messageController.text,
-                          );
-                          
-                          _nameController.clear();
-                          _emailController.clear();
-                          _subjectController.clear();
-                          _messageController.clear();
-                          await launch(mailtoLink.toString());
-                        },
-                        icon: const Icon(Icons.send, size: 18,),
-                        label: const Text("Send",
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              _nameController.clear();
+                              _subjectController.clear();
+                              _messageController.clear();
+                            },
+                            icon: const Icon(Icons.cancel, size: 18,),
+                            label: const Text("Clear",
+                              style: TextStyle(
+                                fontSize: 20
+                            ),),
+                          ),
+                          const SizedBox(width: 2,),
+                          ElevatedButton.icon(
+                            onPressed: () async {
+                              final mailtoLink = Mailto(
+                              to: ['a.thibs98@gmail.com'],
+                              cc: ['thibaudeauapps@gmail.com'],
+                              subject: 'From: ${_nameController.text}: ${_subjectController.text}',
+                              body: _messageController.text,
+                              );
+
+                              _nameController.clear();
+                              _subjectController.clear();
+                              _messageController.clear();
+                              await launch(mailtoLink.toString());
+                            },
+                            icon: const Icon(Icons.send, size: 18,),
+                            label: const Text("Send",
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),),
+                          ),
+                        ],
                       ),
                     ],
                   ),
                 ),
               ),
+              const SizedBox(height: 100,),
             ],
           ),
         ),

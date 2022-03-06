@@ -22,4 +22,8 @@ const databaseDescription = "In my databases class this semester, I am learning 
 
 const cloudDescription = "I am currently in a course learning about cloud architecture and security on Amazon Web Services. Through this class, I am enrolled in the AWS Academy foundations and architecting courses.\n\nI am learning how to use the many tools AWS offers, and at the end of the semester I will present a capstone project of something I built on AWS.";
 
+// URLS
+const sandboxUrl = 'https://creators.byu.edu/sandbox';
+const byuUrl = "https://itc.byu.edu/information-technology-major";
+
 
