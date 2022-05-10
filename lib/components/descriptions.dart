@@ -2,6 +2,8 @@ const intro = "I am passionate about software development because I love the exc
 
 const wyaDescription = "In November 2021, I participated in a hackathon where I began building a mobile app called Where You At? This app is marketed towards young single adults who want to connect with peers and find events to go to in their area. They can create their own one-time or recurring events, as well as find local events they are interested in participating in. I am utilizing Google APIs to embed Google Maps which indicate events using Google location services.";
 
+const gameDescription = "Late night inspiration struck, and soon I will be building a mobile game app called \"Don\'t Get Me Started\", where you and your friends or family put your improvisation skills to the test! You have 30 seconds to rant about a randomly generated topic, with the other players as the judges.\n\nIf you run out of things to say before the time is up, no points for you! This game will be great for families or large groups of friends, and the randomness will keep you all laughing!";
+
 // Experience
 const eurekaDescription = "I am currently working on a small team with the head of the IT & Cybersecurity department doing mobile application development. We are researching the effectiveness of the gamification of health data. The Eureka Trail uses real life steps that your phone tracks and syncs them to the game, making your progress on the trail dependent on your physical activity. I am a full stack developer on this project, integrating Google APIs with our front-end application.";
 
@@ -9,7 +11,9 @@ const schedulingDescription = "Beginning May 2022, I am being hired freelance by
 
 const sandboxDescription = "Beginning September 2022, I will be working as a software engineer alongside a product manager and designer to build and launch a technology startup company. I will be a full-stack developer to manage whatever mobile applications, websites, servers, or databases we need to build our business.\n\nAt the end of the school year, we will pitch our startup to investors and take off from there!";
 
-const savaDescription = "As of March 2022, I have been hired by Sava, a Utah startup company, to help develop their mobile app. I will be developing in Flutter/Dart and collaborating with two other software developers to improve their beta product and add necessary features and functionality.\n\nI will have the opportunity to implement coding best practices and suggest ways to improve the existing code. I will also be responsible for configuring the beta app for the Google Play Store as it is currently only on iOS.";
+const savaDescription = "As of March 2022, I have been hired by Sava, a Utah startup company, to help develop their mobile app. I will be developing in Flutter/Dart and collaborating with two other software developers to improve their beta product and add necessary features and functionality.\n\nI will have the opportunity to implement coding best practices and suggest ways to improve the existing code. I will also be responsible for configuring the beta app for launch on the Google Play Store.";
+
+const kpDescription = "In May 2022, I began working as a web developer for a small Utah startup. Their goal is to help grade-school kids learn second languages faster through schoolwork. The website I am helping develop, LoomVue, does language translation for readings and school assignments to help students immerse themselves into new languages.\n\nMy immediate role is to develop test cases for the app, resolve major bugs, and implement necessary features.";
 
 // Education
 const byuDescription = "Brigham Young University has a fantastic Information Technology program. It is ranked #3 among the 2022 Best Colleges for Information Technology in America. It is also paired with Cybersecurity, so I am receiving in-depth training in both IT and Cybersecurity disciplines.\n\nI am focusing my education on software development so that my full-stack skills are optimal and high-level, making me a major benefit to companies and clients!";
@@ -25,5 +29,6 @@ const cloudDescription = "I am currently in a course learning about cloud archit
 // URLS
 const sandboxUrl = 'https://creators.byu.edu/sandbox';
 const byuUrl = "https://itc.byu.edu/information-technology-major";
+const loomvueUrl = "https://loomvue.com/";
 
 

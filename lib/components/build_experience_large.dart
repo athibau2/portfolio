@@ -33,10 +33,10 @@ class BuildExperienceLarge extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/icons/eureka-logo.png'),
+                            image: Image.asset('assets/icons/eureka-logo.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -72,15 +72,15 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/flutter-logo.png", scale: 3,),
+                                  Image.asset("assets/icons/flutter-logo.png", scale: 3,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/typescript-logo.png", scale: 3,),
+                                  Image.asset("assets/icons/typescript-logo.png", scale: 3,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/node-logo.png", scale: 2,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/firebase-logo.png", scale: 3,),
+                                  Image.asset("assets/icons/firebase-logo.png", scale: 3,),
                                 ],
                               ),
                             ),
@@ -126,9 +126,9 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/flutter-logo.png", scale: 3,),
+                                  Image.asset("assets/icons/flutter-logo.png", scale: 3,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/firebase-logo.png", scale: 3,),
+                                  Image.asset("assets/icons/firebase-logo.png", scale: 3,),
                                 ],
                               ),
                             ),
@@ -138,10 +138,10 @@ class BuildExperienceLarge extends StatelessWidget {
                     ),
                     const SizedBox(width: 10,),
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/sava.png'),
+                            image: Image.asset('assets/sava.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -152,17 +152,17 @@ class BuildExperienceLarge extends StatelessWidget {
                 ),
               ),
 
-              /// SALON SCHEDULING SOFTWARE
+              /// Loom Vue
               SingleChildScrollView(
                 padding: EdgeInsets.all(30),
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/profile.png'),
+                            image: Image.asset('kings-peak.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -171,9 +171,9 @@ class BuildExperienceLarge extends StatelessWidget {
                     ),
                     const SizedBox(width: 10,),
                     Container(
+                      decoration: listDecoration,
                       width: MediaQuery.of(context).size.width * 0.7,
                       alignment: Alignment.topLeft,
-                      decoration: listDecoration,
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
@@ -182,14 +182,14 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Salon Scheduling Platform - ", style: Theme.of(context).textTheme.headline4,),
-                                  Text("Summer 2022", style: Theme.of(context).textTheme.subtitle2,),
+                                  Text("King's Peak Technology - ", style: Theme.of(context).textTheme.headline4,),
+                                  Text("May 2022 - Present", style: Theme.of(context).textTheme.subtitle2,),
                                 ],
                               ),
                               scrollDirection: Axis.horizontal,
                             ),
                             Divider(),
-                            Text(schedulingDescription,
+                            Text(kpDescription,
                               style: Theme.of(context).textTheme.headline6,
                             ),
                             const SizedBox(height: 10,),
@@ -198,15 +198,24 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/vue-logo.png", scale: 55,),
+                                  Image.asset("icons/nextjs.png", scale: 2.2,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/javascript-logo.png", scale: 6.2,),
+                                  Image.asset("icons/reactjs.png", scale: 50,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/node-logo.png", scale: 2,),
+                                  Image.asset("assets/icons/typescript-logo.png", scale: 3,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/firebase-logo.png", scale: 3,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
+                                  const SizedBox(width: 20,),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(loomvueUrl)) {
+                                        throw 'Could not launch $loomvueUrl';
+                                      }
+                                    },
+                                    child: const Text("Learn More"),
+                                  ),
                                 ],
                               ),
                             ),
@@ -259,7 +268,7 @@ class BuildExperienceLarge extends StatelessWidget {
                                       }
                                     },
                                     child: const Text("Learn More"),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
@@ -269,11 +278,11 @@ class BuildExperienceLarge extends StatelessWidget {
                     ),
                     const SizedBox(width: 10,),
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/creators.png'),
+                            image: Image.asset('assets/creators.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -299,11 +308,11 @@ class BuildExperienceLarge extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.transparent,
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/wya.png'),
+                            image: Image.asset('assets/wya.png').image,
                             fit: BoxFit.fitHeight
                         ),
                       ),
@@ -338,17 +347,78 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/flutter-logo.png", scale: 3,),
+                                  Image.asset("assets/icons/flutter-logo.png", scale: 3,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/firebase-logo.png", scale: 3,),
+                                  Image.asset("assets/icons/firebase-logo.png", scale: 3,),
                                 ],
                               ),
                             ),
                           ],
                         ),
                       ),
+                    ),
+                  ],
+                ),
+              ),
+
+              /// DON'T GET ME STARTED
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.7,
+                      alignment: Alignment.topLeft,
+                      decoration: listDecoration,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            SingleChildScrollView(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("Coming Soon - Don't Get Me Started", style: Theme.of(context).textTheme.headline4,),
+                                ],
+                              ),
+                              scrollDirection: Axis.horizontal,
+                            ),
+                            Divider(),
+                            Text(gameDescription,
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            const SizedBox(height: 10,),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset("assets/icons/flutter-logo.png", scale: 3,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/firebase-logo.png", scale: 3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10,),
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: Image.asset('assets/profile.png').image,
+                            fit: BoxFit.contain
+                        ),
+                      ),
+                      height: 250,
+                      width: 250,
                     ),
                   ],
                 ),

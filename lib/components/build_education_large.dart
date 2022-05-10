@@ -36,10 +36,10 @@ class BuildEducationLarge extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/byu-logo.png'),
+                            image: Image.asset('assets/byu-logo.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -129,11 +129,11 @@ class BuildEducationLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/oop.png", scale: 4,),
+                                  Image.asset("assets/icons/oop.png", scale: 4,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/data-structures.png", scale: 8,),
+                                  Image.asset("assets/icons/data-structures.png", scale: 8,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/discrete-math.png", scale: 6,),
+                                  Image.asset("assets/icons/discrete-math.png", scale: 6,),
                                 ],
                               ),
                             ),
@@ -143,10 +143,10 @@ class BuildEducationLarge extends StatelessWidget {
                     ),
                     const SizedBox(width: 10,),
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/icons/cpp-logo.png'),
+                            image: Image.asset('assets/icons/cpp-logo.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -162,11 +162,11 @@ class BuildEducationLarge extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/icons/web-dev.png'),
+                            image: Image.asset('assets/icons/web-dev.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -202,15 +202,15 @@ class BuildEducationLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/vue-logo.png", scale: 55,),
+                                  Image.asset("assets/icons/vue-logo.png", scale: 55,),
                                   const SizedBox(width: 5,),
-                                  Image.asset("../../assets/icons/nuxt.png", scale: 16,),
+                                  Image.asset("assets/icons/nuxt.png", scale: 16,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/ExpressJS-logo.png", scale: 9,),
+                                  Image.asset("assets/icons/ExpressJS-logo.png", scale: 9,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/node-logo.png", scale: 2,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
                                 ],
                               ),
                             ),
@@ -254,13 +254,13 @@ class BuildEducationLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/vue-logo.png", scale: 55,),
+                                  Image.asset("assets/icons/vue-logo.png", scale: 55,),
                                   const SizedBox(width: 5,),
-                                  Image.asset("../../assets/icons/javascript-logo.png", scale: 6.2,),
+                                  Image.asset("assets/icons/javascript-logo.png", scale: 6.2,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/node-logo.png", scale: 2,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
                                   const SizedBox(width: 10,),
                                   FaIcon(FontAwesomeIcons.aws, size: 40,)
                                 ],
@@ -272,10 +272,10 @@ class BuildEducationLarge extends StatelessWidget {
                     ),
                     const SizedBox(width: 10,),
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/icons/database.png'),
+                            image: Image.asset('assets/icons/database.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -291,11 +291,11 @@ class BuildEducationLarge extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.transparent,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/aws.png'),
+                            image: Image.asset('assets/aws.png').image,
                             fit: BoxFit.contain
                         ),
                       ),

@@ -37,10 +37,10 @@ class BuildEducationSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/byu-logo.png'),
+                            image: Image.asset('assets/byu-logo.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -55,21 +55,15 @@ class BuildEducationSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Text("Brigham Young University - ", style: Theme.of(context).textTheme.headline6,),
-                                      Text("2019 - 2024", style: Theme.of(context).textTheme.subtitle2,),
-                                    ],
-                                  ),
-                                  Text("Information Technology", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
+                            Text("Brigham Young University", style: Theme.of(context).textTheme.headline6,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Information Technology: ", style: Theme.of(context).textTheme.subtitle2,),
+                                Text("2019 - 2024", style: Theme.of(context).textTheme.subtitle2,),
+                              ],
                             ),
                             Divider(),
                             Text(byuDescription,
@@ -105,10 +99,10 @@ class BuildEducationSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/icons/cpp-logo.png'),
+                            image: Image.asset('assets/icons/cpp-logo.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -123,16 +117,9 @@ class BuildEducationSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("C++ Programming", style: Theme.of(context).textTheme.headline6,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
+                            Text("C++ Programming", style: Theme.of(context).textTheme.headline6,),
                             Divider(),
                             Text(cppDescription,
                               style: Theme.of(context).textTheme.subtitle1,
@@ -143,11 +130,11 @@ class BuildEducationSmall extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/oop.png", scale: 6,),
+                                  Image.asset("assets/icons/oop.png", scale: 6,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/data-structures.png", scale: 10,),
+                                  Image.asset("assets/icons/data-structures.png", scale: 10,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/discrete-math.png", scale: 8,),
+                                  Image.asset("assets/icons/discrete-math.png", scale: 8,),
                                 ],
                               ),
                             ),
@@ -165,11 +152,11 @@ class BuildEducationSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/icons/web-dev.png'),
+                            image: Image.asset('assets/icons/web-dev.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -184,17 +171,10 @@ class BuildEducationSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Advanced Web Technologies", style: Theme.of(context).textTheme.headline6,),
-                                  Text("January 2022 - April 2022", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
+                            Text("Advanced Web Technologies", style: Theme.of(context).textTheme.headline6,),
+                            Text("January 2022 - April 2022", style: Theme.of(context).textTheme.subtitle2,),
                             Divider(),
                             Text(webDevDescription,
                               style: Theme.of(context).textTheme.subtitle1,
@@ -205,15 +185,15 @@ class BuildEducationSmall extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/vue-logo.png", scale: 70,),
+                                  Image.asset("assets/icons/vue-logo.png", scale: 70,),
                                   const SizedBox(width: 5,),
-                                  Image.asset("../../assets/icons/nuxt.png", scale: 20,),
+                                  Image.asset("assets/icons/nuxt.png", scale: 20,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/ExpressJS-logo.png", scale: 12,),
+                                  Image.asset("assets/icons/ExpressJS-logo.png", scale: 12,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/node-logo.png", scale: 2.5,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2.5,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1.3,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
                                 ],
                               ),
                             ),
@@ -231,10 +211,10 @@ class BuildEducationSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/icons/database.png'),
+                            image: Image.asset('assets/icons/database.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -248,17 +228,10 @@ class BuildEducationSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Database Principles and Applications", style: Theme.of(context).textTheme.headline6,),
-                                  Text("January 2022 - April 2022", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
+                            Text("Database Principles and Applications", style: Theme.of(context).textTheme.headline6,),
+                            Text("January 2022 - April 2022", style: Theme.of(context).textTheme.subtitle2,),
                             Divider(),
                             Text(databaseDescription,
                               style: Theme.of(context).textTheme.subtitle1,
@@ -269,13 +242,13 @@ class BuildEducationSmall extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/vue-logo.png", scale: 70,),
+                                  Image.asset("assets/icons/vue-logo.png", scale: 70,),
                                   const SizedBox(width: 5,),
-                                  Image.asset("../../assets/icons/nuxt.png", scale: 20,),
+                                  Image.asset("assets/icons/nuxt.png", scale: 20,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/node-logo.png", scale: 2.5,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2.5,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1.3,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
                                   const SizedBox(width: 10,),
                                   FaIcon(FontAwesomeIcons.aws, size: 35,)
                                 ],
@@ -295,11 +268,11 @@ class BuildEducationSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.transparent,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/aws.png'),
+                            image: Image.asset('assets/aws.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -313,17 +286,10 @@ class BuildEducationSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Cloud Architecture and Security", style: Theme.of(context).textTheme.headline6,),
-                                  Text("January 2022 - April 2022", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
+                            Text("Cloud Architecture and Security", style: Theme.of(context).textTheme.headline6,),
+                            Text("January 2022 - April 2022", style: Theme.of(context).textTheme.subtitle2,),
                             Divider(),
                             Text(cloudDescription,
                               style: Theme.of(context).textTheme.subtitle1,

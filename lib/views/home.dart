@@ -36,10 +36,10 @@ class _HomePageState extends State<HomePage> {
     return Row(
       children: [
         Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-                image: NetworkImage('assets/profile.png'),
+                image: Image.asset('assets/profile.png').image,
                 fit: BoxFit.contain
             ),
           ),
@@ -82,10 +82,10 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-                image: NetworkImage('assets/profile.png'),
+                image: Image.asset('assets/profile.png').image,
                 fit: BoxFit.contain
             ),
           ),
@@ -100,17 +100,10 @@ class _HomePageState extends State<HomePage> {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SingleChildScrollView(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Hello! My name is Andrew Thibaudeau",
-                        style: Theme.of(context).textTheme.headline6,),
-                    ],
-                  ),
-                  scrollDirection: Axis.horizontal,
-                ),
+                Text("Hello! My name is Andrew Thibaudeau",
+                  style: Theme.of(context).textTheme.headline6,),
                 Divider(),
                 Text(intro,
                   style: Theme.of(context).textTheme.subtitle1,
@@ -175,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                               color: i.color,
                               shape: BoxShape.circle,
                               image: DecorationImage(
-                                  image: NetworkImage(i.url),
+                                  image: Image.asset(i.url).image,
                                   fit: BoxFit.contain
                               ),
                             ),
@@ -201,8 +194,8 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: (width < 860)
                     ? height * 0.9
-                    : height * 0.66,
-                  width: (width < 860) ? width * 0.5 : width * 0.85,
+                    : height * 0.65,
+                  width: width * 0.85,
                   child: CupertinoScrollbar(
                     controller: _scrollController,
                     child: ListView.builder(
@@ -212,9 +205,9 @@ class _HomePageState extends State<HomePage> {
                       itemCount: skillList.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
-                          height: (width < 860)
-                              ? height * 0.61
-                              : height,
+                          // height: (width < 860)
+                          //     ? height * 0.5
+                          //     : height,
                           width: 320, /// MediaQuery.of(context).size.width * 0.25
                           child: Card(
                             elevation: 6,

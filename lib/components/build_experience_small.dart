@@ -37,10 +37,10 @@ class BuildExperienceSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/icons/eureka-logo.png'),
+                            image: Image.asset('assets/icons/eureka-logo.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -55,17 +55,10 @@ class BuildExperienceSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("The Eureka Trail", style: Theme.of(context).textTheme.headline6,),
-                                  Text("April 2021 - Present", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
+                            Text("The Eureka Trail", style: Theme.of(context).textTheme.headline6,),
+                            Text("April 2021 - Present", style: Theme.of(context).textTheme.subtitle2,),
                             Divider(),
                             Text(eurekaDescription,
                               style: Theme.of(context).textTheme.subtitle1,
@@ -76,15 +69,15 @@ class BuildExperienceSmall extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/flutter-logo.png", scale: 3.6,),
+                                  Image.asset("assets/icons/flutter-logo.png", scale: 3.6,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/typescript-logo.png", scale: 4,),
+                                  Image.asset("assets/icons/typescript-logo.png", scale: 4,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/node-logo.png", scale: 2.5,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2.5,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1.3,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/firebase-logo.png", scale: 3.6,),
+                                  Image.asset("assets/icons/firebase-logo.png", scale: 3.6,),
                                 ],
                               ),
                             ),
@@ -104,10 +97,10 @@ class BuildExperienceSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/sava.png'),
+                            image: Image.asset('assets/sava.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -121,17 +114,10 @@ class BuildExperienceSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Sava", style: Theme.of(context).textTheme.headline6,),
-                                  Text("March 2022 - Present", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
+                            Text("Sava", style: Theme.of(context).textTheme.headline6,),
+                            Text("March 2022 - Present", style: Theme.of(context).textTheme.subtitle2,),
                             Divider(),
                             Text(savaDescription,
                               style: Theme.of(context).textTheme.subtitle1,
@@ -142,74 +128,9 @@ class BuildExperienceSmall extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/flutter-logo.png", scale: 3.6,),
+                                  Image.asset("assets/icons/flutter-logo.png", scale: 3.6,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/firebase-logo.png", scale: 3.6,),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              /// SALON SCHEDULING SOFTWARE
-              SingleChildScrollView(
-                padding: EdgeInsets.all(30),
-                scrollDirection: Axis.horizontal,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                            image: NetworkImage('assets/profile.png'),
-                            fit: BoxFit.contain
-                        ),
-                      ),
-                      height: 250,
-                      width: 250,
-                    ),
-                    const SizedBox(height: 10,),
-                    Container(
-                      width: width * 0.7,
-                      alignment: Alignment.topLeft,
-                      decoration: listDecoration,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Salon Scheduling Platform", style: Theme.of(context).textTheme.headline6,),
-                                  Text("Summer 2022", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
-                            Divider(),
-                            Text(schedulingDescription,
-                              style: Theme.of(context).textTheme.subtitle1,
-                            ),
-                            const SizedBox(height: 10,),
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Image.asset("../../assets/icons/vue-logo.png", scale: 70,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/node-logo.png", scale: 2.5,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1.3,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/firebase-logo.png", scale: 3.6,),
+                                  Image.asset("assets/icons/firebase-logo.png", scale: 3.6,),
                                 ],
                               ),
                             ),
@@ -229,11 +150,11 @@ class BuildExperienceSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/creators.png'),
+                            image: Image.asset('assets/creators.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -248,17 +169,10 @@ class BuildExperienceSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Creators_ Sandbox", style: Theme.of(context).textTheme.headline6,),
-                                  Text("September 2022 - April 2023", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
+                            Text("Creators_ Sandbox", style: Theme.of(context).textTheme.headline6,),
+                            Text("September 2022 - April 2023", style: Theme.of(context).textTheme.subtitle2,),
                             Divider(),
                             Text(sandboxDescription,
                               style: Theme.of(context).textTheme.subtitle1,
@@ -304,11 +218,11 @@ class BuildExperienceSmall extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.transparent,
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: NetworkImage('assets/wya.png'),
+                            image: Image.asset('assets/wya.png').image,
                             fit: BoxFit.fitHeight
                         ),
                       ),
@@ -323,16 +237,9 @@ class BuildExperienceSmall extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SingleChildScrollView(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Coming Soon - Where You At?", style: Theme.of(context).textTheme.headline6,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
+                            Text("Coming Soon - Where You At?", style: Theme.of(context).textTheme.headline6,),
                             Divider(),
                             Text(wyaDescription,
                               style: Theme.of(context).textTheme.subtitle1,
@@ -343,11 +250,67 @@ class BuildExperienceSmall extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("../../assets/icons/flutter-logo.png", scale: 3.6,),
+                                  Image.asset("assets/icons/flutter-logo.png", scale: 3.6,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/postgres-logo.png", scale: 1.3,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("../../assets/icons/firebase-logo.png", scale: 3.6,),
+                                  Image.asset("assets/icons/firebase-logo.png", scale: 3.6,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              /// DON'T GET ME STARTED
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: Image.asset('assets/profile.png').image,
+                            fit: BoxFit.contain
+                        ),
+                      ),
+                      height: 250,
+                      width: 250,
+                    ),
+                    const SizedBox(height: 10,),
+                    Container(
+                      width: width * 0.7,
+                      alignment: Alignment.topLeft,
+                      decoration: listDecoration,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Coming Soon - Don't Get Me Started", style: Theme.of(context).textTheme.headline6,),
+                            Divider(),
+                            Text(gameDescription,
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            const SizedBox(height: 10,),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset("assets/icons/flutter-logo.png", scale: 3.6,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/firebase-logo.png", scale: 3.6,),
                                 ],
                               ),
                             ),

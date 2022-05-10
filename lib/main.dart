@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const HomePage(),
+      home: const Experience(),
       // initialRoute: "/views/home.dart",
       routes: {
         "/views/home.dart": (context) => const HomePage(),
