@@ -40,7 +40,7 @@ class HomeImage {
     HomeImage("assets/byu-logo.png", Colors.transparent),
     HomeImage("assets/icons/eureka-logo.png", Colors.white),
     HomeImage("assets/sava.png", Colors.transparent),
-    HomeImage("kings-peak.png", Colors.transparent),
+    HomeImage("assets/kings-peak.png", Colors.transparent),
     HomeImage("assets/creators.png", Colors.white),
   ];
 

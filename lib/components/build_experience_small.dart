@@ -153,7 +153,7 @@ class BuildExperienceSmall extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: Image.asset('kings-peak.png').image,
+                            image: Image.asset('assets/kings-peak.png').image,
                             fit: BoxFit.contain
                         ),
                       ),
@@ -189,9 +189,9 @@ class BuildExperienceSmall extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("icons/nextjs.png", scale: 2.5,),
+                                  Image.asset("assets/icons/nextjs.png", scale: 2.5,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("icons/reactjs.png", scale: 60,),
+                                  Image.asset("assets/icons/reactjs.png", scale: 60,),
                                   const SizedBox(width: 10,),
                                   Image.asset("assets/icons/typescript-logo.png", scale: 4,),
                                   const SizedBox(width: 10,),
@@ -298,7 +298,7 @@ class BuildExperienceSmall extends StatelessWidget {
                         color: Colors.transparent,
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: Image.asset('goat-notes.png').image,
+                            image: Image.asset('assets/goat-notes.png').image,
                             fit: BoxFit.fitWidth
                         ),
                       ),
@@ -367,7 +367,7 @@ class BuildExperienceSmall extends StatelessWidget {
                         color: Colors.transparent,
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: Image.asset('write-now.png').image,
+                            image: Image.asset('assets/write-now.png').image,
                             fit: BoxFit.fitWidth
                         ),
                       ),
