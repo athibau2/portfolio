@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'descriptions.dart';
@@ -299,6 +300,147 @@ class BuildExperienceLarge extends StatelessWidget {
                 height: MediaQuery.of(context).size.height  * 0.1125,
                 width: MediaQuery.of(context).size.width,
                 child: Text("PERSONAL PROJECTS", style: Theme.of(context).textTheme.headline3,),
+              ),
+
+              /// GOAT Notes
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            image: Image.asset('goat-notes.png').image,
+                            fit: BoxFit.fitWidth
+                        ),
+                      ),
+                      height: 175,
+                      width: 350,
+                    ),
+                    const SizedBox(width: 10,),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.65,
+                      alignment: Alignment.topLeft,
+                      decoration: listDecoration,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            SingleChildScrollView(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("GOAT Notes", style: Theme.of(context).textTheme.headline4,),
+                                ],
+                              ),
+                              scrollDirection: Axis.horizontal,
+                            ),
+                            Divider(),
+                            Text(goatnotesDescription,
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            const SizedBox(height: 10,),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset("assets/icons/vue-logo.png", scale: 55,),
+                                  const SizedBox(width: 5,),
+                                  Image.asset("assets/icons/javascript-logo.png", scale: 6.2,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
+                                  const SizedBox(width: 10,),
+                                  FaIcon(FontAwesomeIcons.aws, size: 40,),
+                                  const SizedBox(width: 20,),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(goatnotesUrl)) {
+                                        throw 'Could not launch $goatnotesUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              /// Write Now
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.65,
+                      alignment: Alignment.topLeft,
+                      decoration: listDecoration,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            SingleChildScrollView(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("Coming Soon - Write Now", style: Theme.of(context).textTheme.headline4,),
+                                ],
+                              ),
+                              scrollDirection: Axis.horizontal,
+                            ),
+                            Divider(),
+                            Text(writeNowDescription,
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            const SizedBox(height: 10,),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset("assets/icons/vue-logo.png", scale: 55,),
+                                  const SizedBox(width: 5,),
+                                  Image.asset("assets/icons/nuxt.png", scale: 16,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/ExpressJS-logo.png", scale: 7,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10,),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            image: Image.asset('write-now.png').image,
+                            fit: BoxFit.fitWidth
+                        ),
+                      ),
+                      height: 175,
+                      width: 350,
+                    ),
+                  ],
+                ),
               ),
 
               /// WHERE YOU AT

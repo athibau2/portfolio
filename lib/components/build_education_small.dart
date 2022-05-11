@@ -189,7 +189,7 @@ class BuildEducationSmall extends StatelessWidget {
                                   const SizedBox(width: 5,),
                                   Image.asset("assets/icons/nuxt.png", scale: 20,),
                                   const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/ExpressJS-logo.png", scale: 12,),
+                                  Image.asset("assets/icons/ExpressJS-logo.png", scale: 8,),
                                   const SizedBox(width: 10,),
                                   Image.asset("assets/icons/node-logo.png", scale: 2.5,),
                                   const SizedBox(width: 10,),
@@ -250,7 +250,16 @@ class BuildEducationSmall extends StatelessWidget {
                                   const SizedBox(width: 10,),
                                   Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
                                   const SizedBox(width: 10,),
-                                  FaIcon(FontAwesomeIcons.aws, size: 35,)
+                                  FaIcon(FontAwesomeIcons.aws, size: 35,),
+                                  const SizedBox(width: 20,),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(goatnotesUrl)) {
+                                        throw 'Could not launch $goatnotesUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
                                 ],
                               ),
                             ),

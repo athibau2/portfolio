@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'descriptions.dart';
@@ -142,6 +143,81 @@ class BuildExperienceSmall extends StatelessWidget {
                 ),
               ),
 
+              /// Loom Vue
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: Image.asset('kings-peak.png').image,
+                            fit: BoxFit.contain
+                        ),
+                      ),
+                      height: 250,
+                      width: 250,
+                    ),
+                    const SizedBox(height: 10,),
+                    Container(
+                      decoration: listDecoration,
+                      width: MediaQuery.of(context).size.width * 0.7,
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            SingleChildScrollView(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text("King's Peak Technology - ", style: Theme.of(context).textTheme.headline6,),
+                                  Text("May 2022 - Present", style: Theme.of(context).textTheme.subtitle2,),
+                                ],
+                              ),
+                              scrollDirection: Axis.horizontal,
+                            ),
+                            Divider(),
+                            Text(kpDescription,
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            const SizedBox(height: 10,),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset("icons/nextjs.png", scale: 2.5,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("icons/reactjs.png", scale: 60,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/typescript-logo.png", scale: 4,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2.5,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
+                                  const SizedBox(width: 20,),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(loomvueUrl)) {
+                                        throw 'Could not launch $loomvueUrl';
+                                      }
+                                    },
+                                    child: const Text("Learn More"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /// SANDBOX
               SingleChildScrollView(
                 padding: EdgeInsets.all(30),
@@ -208,6 +284,135 @@ class BuildExperienceSmall extends StatelessWidget {
                 height: height  * 0.1125,
                 width: width,
                 child: Text("PERSONAL PROJECTS", style: Theme.of(context).textTheme.headline4,),
+              ),
+
+              /// GOAT Notes
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            image: Image.asset('goat-notes.png').image,
+                            fit: BoxFit.fitWidth
+                        ),
+                      ),
+                      height: 175,
+                      width: 350,
+                    ),
+                    const SizedBox(height: 10,),
+                    Container(
+                      width: width * 0.7,
+                      alignment: Alignment.topLeft,
+                      decoration: listDecoration,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("GOAT Notes", style: Theme.of(context).textTheme.headline6,),
+                            Divider(),
+                            Text(goatnotesDescription,
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            const SizedBox(height: 10,),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset("assets/icons/vue-logo.png", scale: 70,),
+                                  const SizedBox(width: 5,),
+                                  Image.asset("assets/icons/nuxt.png", scale: 20,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2.5,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
+                                  const SizedBox(width: 10,),
+                                  FaIcon(FontAwesomeIcons.aws, size: 35,),
+                                  const SizedBox(width: 20,),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(goatnotesUrl)) {
+                                        throw 'Could not launch $goatnotesUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              /// Write Now
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            image: Image.asset('write-now.png').image,
+                            fit: BoxFit.fitWidth
+                        ),
+                      ),
+                      height: 175,
+                      width: 350,
+                    ),
+                    const SizedBox(height: 10,),
+                    Container(
+                      width: width * 0.7,
+                      alignment: Alignment.topLeft,
+                      decoration: listDecoration,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Coming Soon - Write Now", style: Theme.of(context).textTheme.headline6,),
+                            Divider(),
+                            Text(writeNowDescription,
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            const SizedBox(height: 10,),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset("assets/icons/vue-logo.png", scale: 70,),
+                                  const SizedBox(width: 5,),
+                                  Image.asset("assets/icons/nuxt.png", scale: 20,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/ExpressJS-logo.png", scale: 8,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/node-logo.png", scale: 2.5,),
+                                  const SizedBox(width: 10,),
+                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
 
               /// WHERE YOU AT
