@@ -204,51 +204,55 @@ class _HomePageState extends State<HomePage> {
                       physics: BouncingScrollPhysics(),
                       itemCount: skillList.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return Container(
-                          // height: (width < 860)
-                          //     ? height * 0.5
-                          //     : height,
-                          width: 320, /// MediaQuery.of(context).size.width * 0.25
-                          child: Card(
-                            elevation: 6,
-                            color: Colors.white70,
-                            child: Padding(
-                              padding: const EdgeInsets.all(6),
-                              child: SingleChildScrollView(
-                                scrollDirection: Axis.vertical,
-                                child: Column(
-                                  children: <Widget>[
-                                    SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        children: [
-                                          IconButton(
-                                            onPressed: () async {
-                                              if (!await launch(skillList[index].url)) {
-                                                throw 'Could not launch ${skillList[index].url}';
-                                              }
-                                            },
-                                            icon: Image.asset(skillList[index].image),
-                                            iconSize: 55,
-                                          ),
-                                          Text(skillList[index].title, style: Theme.of(context).textTheme.headline4),
-                                        ],
+                        return FittedBox(
+                          fit: BoxFit.fitHeight,
+                          child: SizedBox(
+                            width: 250,
+                            child: Card(
+                              elevation: 6,
+                              color: Colors.white70,
+                              child: Padding(
+                                padding: const EdgeInsets.all(6),
+                                child: SingleChildScrollView(
+                                  scrollDirection: Axis.vertical,
+                                  child: Column(
+                                    children: <Widget>[
+                                      SingleChildScrollView(
+                                        scrollDirection: Axis.horizontal,
+                                        child: Row(
+                                          children: [
+                                            IconButton(
+                                              onPressed: () async {
+                                                if (!await launch(skillList[index].url)) {
+                                                  throw 'Could not launch ${skillList[index].url}';
+                                                }
+                                              },
+                                              icon: Image.asset(skillList[index].image),
+                                              iconSize: (width < 860) ? 30 : 40,
+                                            ),
+                                            Text(skillList[index].title,
+                                                style: (width < 860)
+                                                  ? Theme.of(context).textTheme.headline6
+                                                  : Theme.of(context).textTheme.headline5),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    const Divider(thickness: 1,),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.blueGrey.shade100,
-                                        borderRadius: BorderRadius.all(Radius.circular(6)),
+                                      const Divider(thickness: 1,),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.blueGrey.shade100,
+                                          borderRadius: BorderRadius.all(Radius.circular(6)),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(6.0),
+                                          child: Text(skillList[index].description,
+                                              style: (width < 860)
+                                                ? Theme.of(context).textTheme.subtitle2
+                                                : Theme.of(context).textTheme.subtitle1),
+                                        ),
                                       ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(6.0),
-                                        child: Text(skillList[index].description, style: const TextStyle(
-                                          fontSize: 20
-                                        )),
-                                      ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
