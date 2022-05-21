@@ -143,80 +143,80 @@ class BuildExperienceSmall extends StatelessWidget {
                 ),
               ),
 
-              /// Loom Vue
-              SingleChildScrollView(
-                padding: EdgeInsets.all(30),
-                scrollDirection: Axis.horizontal,
-                child: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                            image: Image.asset('assets/kings-peak.png').image,
-                            fit: BoxFit.contain
-                        ),
-                      ),
-                      height: 250,
-                      width: 250,
-                    ),
-                    const SizedBox(height: 10,),
-                    Container(
-                      decoration: listDecoration,
-                      width: MediaQuery.of(context).size.width * 0.7,
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          children: [
-                            SingleChildScrollView(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("King's Peak Technology - ", style: Theme.of(context).textTheme.headline6,),
-                                  Text("May 2022 - Present", style: Theme.of(context).textTheme.subtitle2,),
-                                ],
-                              ),
-                              scrollDirection: Axis.horizontal,
-                            ),
-                            Divider(),
-                            Text(kpDescription,
-                              style: Theme.of(context).textTheme.subtitle1,
-                            ),
-                            const SizedBox(height: 10,),
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Image.asset("assets/icons/nextjs.png", scale: 2.5,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/reactjs.png", scale: 60,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/typescript-logo.png", scale: 4,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/node-logo.png", scale: 2.5,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
-                                  const SizedBox(width: 20,),
-                                  ElevatedButton(
-                                    onPressed: () async {
-                                      if (!await launch(loomvueUrl)) {
-                                        throw 'Could not launch $loomvueUrl';
-                                      }
-                                    },
-                                    child: const Text("Learn More"),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // /// Loom Vue
+              // SingleChildScrollView(
+              //   padding: EdgeInsets.all(30),
+              //   scrollDirection: Axis.horizontal,
+              //   child: Column(
+              //     children: [
+              //       Container(
+              //         decoration: BoxDecoration(
+              //           shape: BoxShape.circle,
+              //           image: DecorationImage(
+              //               image: Image.asset('assets/kings-peak.png').image,
+              //               fit: BoxFit.contain
+              //           ),
+              //         ),
+              //         height: 250,
+              //         width: 250,
+              //       ),
+              //       const SizedBox(height: 10,),
+              //       Container(
+              //         decoration: listDecoration,
+              //         width: MediaQuery.of(context).size.width * 0.7,
+              //         alignment: Alignment.topLeft,
+              //         child: Padding(
+              //           padding: const EdgeInsets.all(15.0),
+              //           child: Column(
+              //             children: [
+              //               SingleChildScrollView(
+              //                 child: Row(
+              //                   mainAxisAlignment: MainAxisAlignment.center,
+              //                   children: [
+              //                     Text("King's Peak Technology - ", style: Theme.of(context).textTheme.headline6,),
+              //                     Text("May 2022 - Present", style: Theme.of(context).textTheme.subtitle2,),
+              //                   ],
+              //                 ),
+              //                 scrollDirection: Axis.horizontal,
+              //               ),
+              //               Divider(),
+              //               Text(kpDescription,
+              //                 style: Theme.of(context).textTheme.subtitle1,
+              //               ),
+              //               const SizedBox(height: 10,),
+              //               SingleChildScrollView(
+              //                 scrollDirection: Axis.horizontal,
+              //                 child: Row(
+              //                   mainAxisAlignment: MainAxisAlignment.end,
+              //                   children: [
+              //                     Image.asset("assets/icons/nextjs.png", scale: 2.5,),
+              //                     const SizedBox(width: 10,),
+              //                     Image.asset("assets/icons/reactjs.png", scale: 60,),
+              //                     const SizedBox(width: 10,),
+              //                     Image.asset("assets/icons/typescript-logo.png", scale: 4,),
+              //                     const SizedBox(width: 10,),
+              //                     Image.asset("assets/icons/node-logo.png", scale: 2.5,),
+              //                     const SizedBox(width: 10,),
+              //                     Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
+              //                     const SizedBox(width: 20,),
+              //                     ElevatedButton(
+              //                       onPressed: () async {
+              //                         if (!await launch(loomvueUrl)) {
+              //                           throw 'Could not launch $loomvueUrl';
+              //                         }
+              //                       },
+              //                       child: const Text("Learn More"),
+              //                     ),
+              //                   ],
+              //                 ),
+              //               ),
+              //             ],
+              //           ),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
 
               /// SANDBOX
               SingleChildScrollView(
