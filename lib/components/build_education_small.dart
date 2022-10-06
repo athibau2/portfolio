@@ -194,6 +194,24 @@ class BuildEducationSmall extends StatelessWidget {
                                   Image.asset("assets/icons/node-logo.png", scale: 2.5,),
                                   const SizedBox(width: 10,),
                                   Image.asset("assets/icons/postgres-logo.png", scale: 1.3,),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const FaIcon(
+                                    FontAwesomeIcons.aws,
+                                    size: 35,
+                                  ),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(writenowUrl)) {
+                                        throw 'Could not launch $writenowUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
                                 ],
                               ),
                             ),

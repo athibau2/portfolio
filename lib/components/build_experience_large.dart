@@ -22,9 +22,12 @@ class BuildExperienceLarge extends StatelessWidget {
               Container(
                 decoration: pageBar,
                 alignment: Alignment.center,
-                height: MediaQuery.of(context).size.height  * 0.1125,
+                height: MediaQuery.of(context).size.height * 0.1125,
                 width: MediaQuery.of(context).size.width,
-                child: Text("EXPERIENCE", style: Theme.of(context).textTheme.headline3,),
+                child: Text(
+                  "EXPERIENCE",
+                  style: Theme.of(context).textTheme.headline3,
+                ),
               ),
 
               /// THE EUREKA TRAIL
@@ -37,14 +40,16 @@ class BuildExperienceLarge extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: Image.asset('assets/icons/eureka-logo.png').image,
-                            fit: BoxFit.contain
-                        ),
+                            image: Image.asset('assets/icons/eureka-logo.png')
+                                .image,
+                            fit: BoxFit.contain),
                       ),
                       height: 250,
                       width: 250,
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       decoration: listDecoration,
                       width: MediaQuery.of(context).size.width * 0.7,
@@ -57,31 +62,65 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("The Eureka Trail - ", style: Theme.of(context).textTheme.headline4,),
-                                  Text("April 2021 - Present", style: Theme.of(context).textTheme.subtitle2,),
+                                  Text(
+                                    "The Eureka Trail - ",
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
+                                  Text(
+                                    "April 2021 - Present",
+                                    style:
+                                        Theme.of(context).textTheme.subtitle2,
+                                  ),
                                 ],
                               ),
                               scrollDirection: Axis.horizontal,
                             ),
                             Divider(),
-                            Text(eurekaDescription,
+                            Text(
+                              eurekaDescription,
                               style: Theme.of(context).textTheme.headline6,
                             ),
-                            const SizedBox(height: 10,),
+                            const SizedBox(
+                              height: 10,
+                            ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("assets/icons/flutter-logo.png", scale: 3,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/typescript-logo.png", scale: 3,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/firebase-logo.png", scale: 3,),
+                                  Image.asset(
+                                    "assets/icons/flutter-logo.png",
+                                    scale: 3,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/typescript-logo.png",
+                                    scale: 3,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/node-logo.png",
+                                    scale: 2,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/postgres-logo.png",
+                                    scale: 1,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/firebase-logo.png",
+                                    scale: 3,
+                                  ),
                                 ],
                               ),
                             ),
@@ -111,25 +150,44 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Sava - ", style: Theme.of(context).textTheme.headline4,),
-                                  Text("March 2022 - Present", style: Theme.of(context).textTheme.subtitle2,),
+                                  Text(
+                                    "Sava - ",
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
+                                  Text(
+                                    "March 2022 - Present",
+                                    style:
+                                        Theme.of(context).textTheme.subtitle2,
+                                  ),
                                 ],
                               ),
                               scrollDirection: Axis.horizontal,
                             ),
                             Divider(),
-                            Text(savaDescription,
+                            Text(
+                              savaDescription,
                               style: Theme.of(context).textTheme.headline6,
                             ),
-                            const SizedBox(height: 10,),
+                            const SizedBox(
+                              height: 10,
+                            ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("assets/icons/flutter-logo.png", scale: 3,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/firebase-logo.png", scale: 3,),
+                                  Image.asset(
+                                    "assets/icons/flutter-logo.png",
+                                    scale: 3,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/firebase-logo.png",
+                                    scale: 3,
+                                  ),
                                 ],
                               ),
                             ),
@@ -137,14 +195,15 @@ class BuildExperienceLarge extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             image: Image.asset('assets/sava.png').image,
-                            fit: BoxFit.contain
-                        ),
+                            fit: BoxFit.contain),
                       ),
                       height: 250,
                       width: 250,
@@ -152,81 +211,6 @@ class BuildExperienceLarge extends StatelessWidget {
                   ],
                 ),
               ),
-
-              // /// Loom Vue
-              // SingleChildScrollView(
-              //   padding: EdgeInsets.all(30),
-              //   scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //     children: [
-              //       Container(
-              //         decoration: BoxDecoration(
-              //           shape: BoxShape.circle,
-              //           image: DecorationImage(
-              //               image: Image.asset('assets/kings-peak.png').image,
-              //               fit: BoxFit.contain
-              //           ),
-              //         ),
-              //         height: 250,
-              //         width: 250,
-              //       ),
-              //       const SizedBox(width: 10,),
-              //       Container(
-              //         decoration: listDecoration,
-              //         width: MediaQuery.of(context).size.width * 0.7,
-              //         alignment: Alignment.topLeft,
-              //         child: Padding(
-              //           padding: const EdgeInsets.all(15.0),
-              //           child: Column(
-              //             children: [
-              //               SingleChildScrollView(
-              //                 child: Row(
-              //                   mainAxisAlignment: MainAxisAlignment.center,
-              //                   children: [
-              //                     Text("King's Peak Technology - ", style: Theme.of(context).textTheme.headline4,),
-              //                     Text("May 2022 - Present", style: Theme.of(context).textTheme.subtitle2,),
-              //                   ],
-              //                 ),
-              //                 scrollDirection: Axis.horizontal,
-              //               ),
-              //               Divider(),
-              //               Text(kpDescription,
-              //                 style: Theme.of(context).textTheme.headline6,
-              //               ),
-              //               const SizedBox(height: 10,),
-              //               SingleChildScrollView(
-              //                 scrollDirection: Axis.horizontal,
-              //                 child: Row(
-              //                   mainAxisAlignment: MainAxisAlignment.end,
-              //                   children: [
-              //                     Image.asset("assets/icons/nextjs.png", scale: 2.2,),
-              //                     const SizedBox(width: 10,),
-              //                     Image.asset("assets/icons/reactjs.png", scale: 50,),
-              //                     const SizedBox(width: 10,),
-              //                     Image.asset("assets/icons/typescript-logo.png", scale: 3,),
-              //                     const SizedBox(width: 10,),
-              //                     Image.asset("assets/icons/node-logo.png", scale: 2,),
-              //                     const SizedBox(width: 10,),
-              //                     Image.asset("assets/icons/postgres-logo.png", scale: 1,),
-              //                     const SizedBox(width: 20,),
-              //                     ElevatedButton(
-              //                       onPressed: () async {
-              //                         if (!await launch(loomvueUrl)) {
-              //                           throw 'Could not launch $loomvueUrl';
-              //                         }
-              //                       },
-              //                       child: const Text("Learn More"),
-              //                     ),
-              //                   ],
-              //                 ),
-              //               ),
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
 
               /// SANDBOX
               SingleChildScrollView(
@@ -240,13 +224,14 @@ class BuildExperienceLarge extends StatelessWidget {
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             image: Image.asset('assets/creators.png').image,
-                            fit: BoxFit.contain
-                        ),
+                            fit: BoxFit.contain),
                       ),
                       height: 250,
                       width: 250,
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.7,
                       alignment: Alignment.topLeft,
@@ -259,17 +244,28 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Creators_ Sandbox - ", style: Theme.of(context).textTheme.headline4,),
-                                  Text("September 2022 - April 2023", style: Theme.of(context).textTheme.subtitle2,),
+                                  Text(
+                                    "Creators_ Sandbox - ",
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
+                                  Text(
+                                    "September 2022 - April 2023",
+                                    style:
+                                        Theme.of(context).textTheme.subtitle2,
+                                  ),
                                 ],
                               ),
                               scrollDirection: Axis.horizontal,
                             ),
                             Divider(),
-                            Text(sandboxDescription,
+                            Text(
+                              sandboxDescription,
                               style: Theme.of(context).textTheme.headline6,
                             ),
-                            const SizedBox(height: 10,),
+                            const SizedBox(
+                              height: 10,
+                            ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
@@ -294,13 +290,18 @@ class BuildExperienceLarge extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
               Container(
                 decoration: pageBar,
                 alignment: Alignment.center,
-                height: MediaQuery.of(context).size.height  * 0.1125,
+                height: MediaQuery.of(context).size.height * 0.1125,
                 width: MediaQuery.of(context).size.width,
-                child: Text("PERSONAL PROJECTS", style: Theme.of(context).textTheme.headline3,),
+                child: Text(
+                  "PERSONAL PROJECTS",
+                  style: Theme.of(context).textTheme.headline3,
+                ),
               ),
 
               /// GOAT Notes
@@ -315,13 +316,14 @@ class BuildExperienceLarge extends StatelessWidget {
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
                             image: Image.asset('assets/goat-notes.png').image,
-                            fit: BoxFit.fitWidth
-                        ),
+                            fit: BoxFit.fitWidth),
                       ),
                       height: 175,
                       width: 350,
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.65,
                       alignment: Alignment.topLeft,
@@ -334,33 +336,70 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("GOAT Notes", style: Theme.of(context).textTheme.headline4,),
+                                  Text(
+                                    "GOAT Notes",
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
                                 ],
                               ),
                               scrollDirection: Axis.horizontal,
                             ),
                             Divider(),
-                            Text(goatnotesDescription,
+                            Text(
+                              goatnotesDescription,
                               style: Theme.of(context).textTheme.headline6,
                             ),
-                            const SizedBox(height: 10,),
+                            const SizedBox(
+                              height: 10,
+                            ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("assets/icons/vue-logo.png", scale: 55,),
-                                  const SizedBox(width: 5,),
-                                  Image.asset("assets/icons/nuxt.png", scale: 16,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/javascript-logo.png", scale: 6.2,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
-                                  const SizedBox(width: 10,),
-                                  FaIcon(FontAwesomeIcons.aws, size: 40,),
-                                  const SizedBox(width: 20,),
+                                  Image.asset(
+                                    "assets/icons/vue-logo.png",
+                                    scale: 55,
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/nuxt.png",
+                                    scale: 16,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/javascript-logo.png",
+                                    scale: 6.2,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/node-logo.png",
+                                    scale: 2,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/postgres-logo.png",
+                                    scale: 1,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const FaIcon(
+                                    FontAwesomeIcons.aws,
+                                    size: 40,
+                                  ),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
                                   ElevatedButton(
                                     onPressed: () async {
                                       if (!await launch(goatnotesUrl)) {
@@ -398,30 +437,63 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Coming Soon - Write Now", style: Theme.of(context).textTheme.headline4,),
+                                  Text(
+                                    "Write Now",
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
                                 ],
                               ),
                               scrollDirection: Axis.horizontal,
                             ),
                             Divider(),
-                            Text(writeNowDescription,
+                            Text(
+                              writeNowDescription,
                               style: Theme.of(context).textTheme.headline6,
                             ),
-                            const SizedBox(height: 10,),
+                            const SizedBox(
+                              height: 10,
+                            ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("assets/icons/vue-logo.png", scale: 55,),
-                                  const SizedBox(width: 5,),
-                                  Image.asset("assets/icons/nuxt.png", scale: 16,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/ExpressJS-logo.png", scale: 7,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/node-logo.png", scale: 2,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
+                                  Image.asset(
+                                    "assets/icons/vue-logo.png",
+                                    scale: 55,
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/nuxt.png",
+                                    scale: 16,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/ExpressJS-logo.png",
+                                    scale: 7,
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Image.asset("assets/icons/node-logo.png",
+                                      scale: 2),
+                                  const SizedBox(width: 10),
+                                  Image.asset("assets/icons/postgres-logo.png",
+                                      scale: 1),
+                                  const SizedBox(width: 10),
+                                  const FaIcon(FontAwesomeIcons.aws, size: 40),
+                                  const SizedBox(width: 20),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(writenowUrl)) {
+                                        throw 'Could not launch $writenowUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
                                 ],
                               ),
                             ),
@@ -429,15 +501,16 @@ class BuildExperienceLarge extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.transparent,
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
                             image: Image.asset('assets/write-now.png').image,
-                            fit: BoxFit.fitWidth
-                        ),
+                            fit: BoxFit.fitWidth),
                       ),
                       height: 175,
                       width: 350,
@@ -458,13 +531,14 @@ class BuildExperienceLarge extends StatelessWidget {
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
                             image: Image.asset('assets/wya.png').image,
-                            fit: BoxFit.fitHeight
-                        ),
+                            fit: BoxFit.fitHeight),
                       ),
                       height: 300,
                       width: 250,
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.7,
                       alignment: Alignment.topLeft,
@@ -477,26 +551,46 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Coming Soon - Where You At?", style: Theme.of(context).textTheme.headline4,),
+                                  Text(
+                                    "Coming Soon - Where You At?",
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
                                 ],
                               ),
                               scrollDirection: Axis.horizontal,
                             ),
                             Divider(),
-                            Text(wyaDescription,
+                            Text(
+                              wyaDescription,
                               style: Theme.of(context).textTheme.headline6,
                             ),
-                            const SizedBox(height: 10,),
+                            const SizedBox(
+                              height: 10,
+                            ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("assets/icons/flutter-logo.png", scale: 3,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/firebase-logo.png", scale: 3,),
+                                  Image.asset(
+                                    "assets/icons/flutter-logo.png",
+                                    scale: 3,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/postgres-logo.png",
+                                    scale: 1,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/firebase-logo.png",
+                                    scale: 3,
+                                  ),
                                 ],
                               ),
                             ),
@@ -526,26 +620,46 @@ class BuildExperienceLarge extends StatelessWidget {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Coming Soon - Don't Get Me Started", style: Theme.of(context).textTheme.headline4,),
+                                  Text(
+                                    "Coming Soon - Don't Get Me Started",
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
                                 ],
                               ),
                               scrollDirection: Axis.horizontal,
                             ),
                             Divider(),
-                            Text(gameDescription,
+                            Text(
+                              gameDescription,
                               style: Theme.of(context).textTheme.headline6,
                             ),
-                            const SizedBox(height: 10,),
+                            const SizedBox(
+                              height: 10,
+                            ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Image.asset("assets/icons/flutter-logo.png", scale: 3,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/postgres-logo.png", scale: 1,),
-                                  const SizedBox(width: 10,),
-                                  Image.asset("assets/icons/firebase-logo.png", scale: 3,),
+                                  Image.asset(
+                                    "assets/icons/flutter-logo.png",
+                                    scale: 3,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/postgres-logo.png",
+                                    scale: 1,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/firebase-logo.png",
+                                    scale: 3,
+                                  ),
                                 ],
                               ),
                             ),
@@ -553,14 +667,15 @@ class BuildExperienceLarge extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             image: Image.asset('assets/profile.png').image,
-                            fit: BoxFit.contain
-                        ),
+                            fit: BoxFit.contain),
                       ),
                       height: 250,
                       width: 250,
