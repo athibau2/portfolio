@@ -9,7 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 PreferredSizeWidget buildAppBar(BuildContext context) {
   const _githubUrl = 'https://github.com/athibau2';
   const _linkedinUrl =
-      'https://www.linkedin.com/in/andrew-thibaudeau-aa312bb1/';
+      'https://www.linkedin.com/in/andrew-thibaudeau';
   double width = MediaQuery.of(context).size.width;
 
   if (width < 860) {
