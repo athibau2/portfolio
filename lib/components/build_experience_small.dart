@@ -116,6 +116,13 @@ class BuildExperienceSmall extends StatelessWidget {
                                     "assets/icons/firebase-logo.png",
                                     scale: 3.6,
                                   ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  const FaIcon(
+                                    FontAwesomeIcons.aws,
+                                    size: 35,
+                                  ),
                                 ],
                               ),
                             ),
@@ -158,7 +165,7 @@ class BuildExperienceSmall extends StatelessWidget {
                               style: Theme.of(context).textTheme.headline6,
                             ),
                             Text(
-                              "March 2022 - Present",
+                              "March 2022 - June 2022",
                               style: Theme.of(context).textTheme.subtitle2,
                             ),
                             Divider(),
