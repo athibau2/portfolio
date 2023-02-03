@@ -145,7 +145,7 @@ class BuildExperienceSmall extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: Image.asset('maupin-homes.png').image,
+                            image: Image.asset('assets/maupin-homes.png').image,
                             fit: BoxFit.contain),
                       ),
                       height: 200,
@@ -237,7 +237,7 @@ class BuildExperienceSmall extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: Image.asset('sava-copy.png')
+                            image: Image.asset('assets/sava-copy.png')
                                 .image, // croped original for copy
                             fit: BoxFit.fitWidth),
                       ),

@@ -227,7 +227,7 @@ class BuildExperienceLarge extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: Image.asset('maupin-homes.png').image,
+                            image: Image.asset('assets/maupin-homes.png').image,
                             fit: BoxFit.contain),
                       ),
                       height: 250,
