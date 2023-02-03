@@ -17,6 +17,9 @@ const goatnotesDescription =
 const eurekaDescription =
     "I am currently working on a small team with the head of the IT & Cybersecurity department at BYU doing mobile application development. We are researching the effectiveness of the gamification of health data. The Eureka Trail uses real life steps that your phone tracks and syncs them to the game, making your progress on the trail dependent on your physical activity. I am a full stack developer on this project, integrating Google APIs with our front-end application.";
 
+const maupinHomesDescription =
+    "I was hired freelance to develop a business website for Maupin Homes, LLC. They are a contracting business for building custom homes, and until now have had no internet presence. I designed and developed their customer-facing website with robust designs and features to engage and attract customers. Between beginning specs, revisions, reviews, and completion, this project lasted just under a month.";
+
 const sandboxDescription =
     "Beginning September 2022, I will be working as a software engineer alongside a product manager and designer to build and launch a technology startup company. I will be a full-stack developer to manage whatever mobile applications, websites, servers, or databases we need to build our business.\n\nAt the end of the school year, we will pitch our startup to investors and take off from there!";
 
@@ -47,3 +50,4 @@ const sandboxUrl = 'https://creators.byu.edu/sandbox';
 const byuUrl = "https://itc.byu.edu/information-technology-major";
 const goatnotesUrl = "http://goatnotes.net";
 const writenowUrl = "https://getwritenow.com";
+const maupinHomesUrl = "https://maupinhomesco.com";

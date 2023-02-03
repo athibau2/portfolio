@@ -40,13 +40,14 @@ class _HomePageState extends State<HomePage> {
             shape: BoxShape.circle,
             image: DecorationImage(
                 image: Image.asset('assets/profile.png').image,
-                fit: BoxFit.contain
-            ),
+                fit: BoxFit.contain),
           ),
           height: 250,
           width: 250,
         ),
-        const SizedBox(width: 10,),
+        const SizedBox(
+          width: 10,
+        ),
         Container(
           decoration: listDecoration,
           width: width * 0.7,
@@ -59,14 +60,17 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Hello! My name is Andrew Thibaudeau",
-                        style: Theme.of(context).textTheme.headline4,),
+                      Text(
+                        "Hello! My name is Andrew Thibaudeau",
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
                     ],
                   ),
                   scrollDirection: Axis.horizontal,
                 ),
                 Divider(),
-                Text(intro,
+                Text(
+                  intro,
                   style: Theme.of(context).textTheme.headline6,
                 ),
               ],
@@ -86,13 +90,14 @@ class _HomePageState extends State<HomePage> {
             shape: BoxShape.circle,
             image: DecorationImage(
                 image: Image.asset('assets/profile.png').image,
-                fit: BoxFit.contain
-            ),
+                fit: BoxFit.contain),
           ),
           height: 250,
           width: 250,
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         Container(
           decoration: listDecoration,
           width: width * 0.7,
@@ -102,10 +107,13 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Hello! My name is Andrew Thibaudeau",
-                  style: Theme.of(context).textTheme.headline6,),
+                Text(
+                  "Hello! My name is Andrew Thibaudeau",
+                  style: Theme.of(context).textTheme.headline6,
+                ),
                 Divider(),
-                Text(intro,
+                Text(
+                  intro,
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
               ],
@@ -115,7 +123,6 @@ class _HomePageState extends State<HomePage> {
       ],
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -137,20 +144,21 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   decoration: pageBar,
                   alignment: Alignment.center,
-                  height: height  * 0.1125,
+                  height: height * 0.1125,
                   width: width,
-                  child: Text("HOME",
+                  child: Text(
+                    "HOME",
                     style: (width < 860)
-                      ? Theme.of(context).textTheme.headline4
-                      : Theme.of(context).textTheme.headline3,),
+                        ? Theme.of(context).textTheme.headline4
+                        : Theme.of(context).textTheme.headline3,
+                  ),
                 ),
                 SingleChildScrollView(
-                  padding: EdgeInsets.all(30),
-                  scrollDirection: Axis.horizontal,
-                  child: (width < 860) ?
-                      introSmall(context, width)
-                      : introLarge(context, width)
-                ),
+                    padding: EdgeInsets.all(30),
+                    scrollDirection: Axis.horizontal,
+                    child: (width < 860)
+                        ? introSmall(context, width)
+                        : introLarge(context, width)),
                 CarouselSlider(
                   options: CarouselOptions(
                     height: 250.0,
@@ -164,14 +172,13 @@ class _HomePageState extends State<HomePage> {
                     return Builder(
                       builder: (BuildContext context) {
                         return Container(
-                            decoration: BoxDecoration(
-                              color: i.color,
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                  image: Image.asset(i.url).image,
-                                  fit: BoxFit.contain
-                              ),
-                            ),
+                          decoration: BoxDecoration(
+                            color: i.color,
+                            shape: i.shape,
+                            image: DecorationImage(
+                                image: Image.asset(i.url).image,
+                                fit: BoxFit.contain),
+                          ),
                           width: 250,
                           height: 250,
                         );
@@ -179,90 +186,112 @@ class _HomePageState extends State<HomePage> {
                     );
                   }).toList(),
                 ),
-                const SizedBox(height: 40,),
+                const SizedBox(
+                  height: 40,
+                ),
                 Container(
                   decoration: pageBar,
                   alignment: Alignment.center,
                   height: height * 0.1125,
                   width: width,
-                  child: Text("SKILLS",
+                  child: Text(
+                    "SKILLS",
                     style: (width < 860)
                         ? Theme.of(context).textTheme.headline4
-                        : Theme.of(context).textTheme.headline3,),
+                        : Theme.of(context).textTheme.headline3,
+                  ),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 SizedBox(
-                  height: (width < 860)
-                    ? height * 0.9
-                    : height * 0.65,
-                  width: width * 0.85,
+                  height: height * 0.65, // (width < 860) ? height * 0.65 :
+                  width: width * 0.85, // (width < 860) ? width * 0.75 :
                   child: CupertinoScrollbar(
                     controller: _scrollController,
                     child: ListView.builder(
-                      scrollDirection: (width < 860) ? Axis.vertical : Axis.horizontal,
-                      controller: _scrollController,
-                      physics: BouncingScrollPhysics(),
-                      itemCount: skillList.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return FittedBox(
-                          fit: BoxFit.fitHeight,
-                          child: SizedBox(
-                            width: 250,
-                            child: Card(
-                              elevation: 6,
-                              color: Colors.white70,
-                              child: Padding(
-                                padding: const EdgeInsets.all(6),
-                                child: SingleChildScrollView(
-                                  scrollDirection: Axis.vertical,
-                                  child: Column(
-                                    children: <Widget>[
-                                      SingleChildScrollView(
-                                        scrollDirection: Axis.horizontal,
-                                        child: Row(
-                                          children: [
-                                            IconButton(
-                                              onPressed: () async {
-                                                if (!await launch(skillList[index].url)) {
-                                                  throw 'Could not launch ${skillList[index].url}';
-                                                }
-                                              },
-                                              icon: Image.asset(skillList[index].image),
-                                              iconSize: (width < 860) ? 30 : 40,
-                                            ),
-                                            Text(skillList[index].title,
+                        scrollDirection:
+                            (width < 860) ? Axis.horizontal : Axis.horizontal,
+                        controller: _scrollController,
+                        physics: BouncingScrollPhysics(),
+                        itemCount: skillList.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return FittedBox(
+                            fit: BoxFit.fitHeight,
+                            child: SizedBox(
+                              width: 200,
+                              child: Card(
+                                elevation: 6,
+                                color: Colors.white70,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(6),
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.vertical,
+                                    child: Column(
+                                      children: <Widget>[
+                                        SingleChildScrollView(
+                                          scrollDirection: Axis.horizontal,
+                                          child: Row(
+                                            children: [
+                                              IconButton(
+                                                onPressed: () async {
+                                                  if (!await launch(
+                                                      skillList[index].url)) {
+                                                    throw 'Could not launch ${skillList[index].url}';
+                                                  }
+                                                },
+                                                icon: Image.asset(
+                                                    skillList[index].image),
+                                                iconSize:
+                                                    (width < 860) ? 30 : 30,
+                                              ),
+                                              Text(skillList[index].title,
+                                                  style: (width < 860)
+                                                      ? Theme.of(context)
+                                                          .textTheme
+                                                          .headline6
+                                                      : Theme.of(context)
+                                                          .textTheme
+                                                          .headline6),
+                                            ],
+                                          ),
+                                        ),
+                                        const Divider(
+                                          thickness: 1,
+                                        ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.blueGrey.shade100,
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                                    Radius.circular(6)),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(6.0),
+                                            child: Text(
+                                                skillList[index].description,
                                                 style: (width < 860)
-                                                  ? Theme.of(context).textTheme.headline6
-                                                  : Theme.of(context).textTheme.headline5),
-                                          ],
+                                                    ? Theme.of(context)
+                                                        .textTheme
+                                                        .subtitle2
+                                                    : Theme.of(context)
+                                                        .textTheme
+                                                        .subtitle1),
+                                          ),
                                         ),
-                                      ),
-                                      const Divider(thickness: 1,),
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          color: Colors.blueGrey.shade100,
-                                          borderRadius: BorderRadius.all(Radius.circular(6)),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(6.0),
-                                          child: Text(skillList[index].description,
-                                              style: (width < 860)
-                                                ? Theme.of(context).textTheme.subtitle2
-                                                : Theme.of(context).textTheme.subtitle1),
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                        );
-                      }
-                    ),
+                          );
+                        }),
                   ),
                 ),
-                const SizedBox(height: 200,),
+                const SizedBox(
+                  height: 200,
+                ),
               ],
             ),
           ],

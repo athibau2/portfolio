@@ -139,12 +139,123 @@ class BuildExperienceLarge extends StatelessWidget {
                 ),
               ),
 
+              /// Maupin Homes
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.7,
+                      alignment: Alignment.topLeft,
+                      decoration: listDecoration,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            SingleChildScrollView(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Maupin Homes - ",
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
+                                  ),
+                                  Text(
+                                    "December 2022 - January 2023",
+                                    style:
+                                        Theme.of(context).textTheme.subtitle2,
+                                  ),
+                                ],
+                              ),
+                              scrollDirection: Axis.horizontal,
+                            ),
+                            const Divider(),
+                            Text(
+                              maupinHomesDescription,
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset(
+                                    "assets/icons/vue-logo.png",
+                                    scale: 55,
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/nuxt.png",
+                                    scale: 16,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/javascript-logo.png",
+                                    scale: 6.2,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(maupinHomesUrl)) {
+                                        throw 'Could not launch $maupinHomesUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            image: Image.asset('maupin-homes.png').image,
+                            fit: BoxFit.contain),
+                      ),
+                      height: 250,
+                      width: 250,
+                    ),
+                  ],
+                ),
+              ),
+
               /// SAVA
               SingleChildScrollView(
                 padding: EdgeInsets.all(30),
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: Image.asset('assets/sava.png').image,
+                            fit: BoxFit.contain),
+                      ),
+                      height: 250,
+                      width: 250,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.7,
                       alignment: Alignment.topLeft,
@@ -202,19 +313,6 @@ class BuildExperienceLarge extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                            image: Image.asset('assets/sava.png').image,
-                            fit: BoxFit.contain),
-                      ),
-                      height: 250,
-                      width: 250,
-                    ),
                   ],
                 ),
               ),
@@ -225,20 +323,6 @@ class BuildExperienceLarge extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                            image: Image.asset('assets/creators.png').image,
-                            fit: BoxFit.contain),
-                      ),
-                      height: 250,
-                      width: 250,
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.7,
                       alignment: Alignment.topLeft,
@@ -292,6 +376,20 @@ class BuildExperienceLarge extends StatelessWidget {
                           ],
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: Image.asset('assets/creators.png').image,
+                            fit: BoxFit.contain),
+                      ),
+                      height: 250,
+                      width: 250,
                     ),
                   ],
                 ),

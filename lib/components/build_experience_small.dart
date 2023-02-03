@@ -134,6 +134,98 @@ class BuildExperienceSmall extends StatelessWidget {
                 ),
               ),
 
+              /// MAUPIN HOMES
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            image: Image.asset('maupin-homes.png').image,
+                            fit: BoxFit.contain),
+                      ),
+                      height: 200,
+
+                      /// changed from 250
+                      width: 250,
+                    ),
+                    // const SizedBox(
+                    //   height: 10,
+                    // ),
+                    Container(
+                      decoration: listDecoration,
+                      width: width * 0.7,
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Maupin Homes",
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            Text(
+                              "December 2022 - January 2023",
+                              style: Theme.of(context).textTheme.subtitle2,
+                            ),
+                            const Divider(),
+                            Text(
+                              maupinHomesDescription,
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset(
+                                    "assets/icons/vue-logo.png",
+                                    scale: 70,
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/nuxt.png",
+                                    scale: 20,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/javascript-logo.png",
+                                    scale: 7.2,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(maupinHomesUrl)) {
+                                        throw 'Could not launch $maupinHomesUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /// SAVA
               SingleChildScrollView(
                 padding: EdgeInsets.all(30),
@@ -143,12 +235,13 @@ class BuildExperienceSmall extends StatelessWidget {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        shape: BoxShape.circle,
+                        shape: BoxShape.rectangle,
                         image: DecorationImage(
-                            image: Image.asset('assets/sava.png').image,
-                            fit: BoxFit.contain),
+                            image: Image.asset('sava-copy.png')
+                                .image, // croped original for copy
+                            fit: BoxFit.fitWidth),
                       ),
-                      height: 250,
+                      height: 200, // changed from 250
                       width: 250,
                     ),
                     Container(
@@ -343,6 +436,13 @@ class BuildExperienceSmall extends StatelessWidget {
                                   Image.asset(
                                     "assets/icons/nuxt.png",
                                     scale: 20,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/javascript-logo.png",
+                                    scale: 7.2,
                                   ),
                                   const SizedBox(
                                     width: 10,
