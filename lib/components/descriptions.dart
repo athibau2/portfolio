@@ -49,5 +49,5 @@ const cloudDescription =
 const sandboxUrl = 'https://creators.byu.edu/sandbox';
 const byuUrl = "https://itc.byu.edu/information-technology-major";
 const goatnotesUrl = "http://goatnotes.net";
-const writenowUrl = "https://getwritenow.com";
+const writenowUrl = "https://joinwritenow.com";
 const maupinHomesUrl = "https://maupinhomesco.com";
