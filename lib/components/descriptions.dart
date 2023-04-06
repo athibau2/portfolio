@@ -14,8 +14,14 @@ const goatnotesDescription =
     "As mentioned in the Education section, I developed a full-stack application with a complex database structure in my Databases class. This project has been continuing for a while and many new features are being added. Currently, GOAT Notes is live for use!\n\nGOAT Notes removes the pain of useless note-taking by helping you organize your notes in a helpful way. No more need to waste time making physical flashcards or searching through pages of notes to make a Quizlet. Now, you can keep vocab words, study questions, helpful links, and notes all separated so that you can study effectively right then and there! Study plans keep you accountable, as well as the ability to automatically share note pages with friends for collaborative study.";
 
 // Experience
+const sayloDescription =
+    "In April 2023, I was hired by Saylo Innovations as their new Technical Lead. I will act as the expert in their technology and code, eventually transitioning to become their CTO. Saylo Innovations uses their expansive and valuable codebase to provide software solutions for many companies in a cheaper and faster way than the standard market. I will be leading and managing software teams as the client-base expands.";
+
+const deltaAppsDescription =
+    "Together with Travis Reynertson, I co-founded Delta Apps to make a difference in the world through technology. We build and own several web and mobile applications, as well as freelancing for other businesses to accommodate their development needs.";
+
 const eurekaDescription =
-    "I am currently working on a small team with the head of the IT & Cybersecurity department at BYU doing mobile application development. We are researching the effectiveness of the gamification of health data. The Eureka Trail uses real life steps that your phone tracks and syncs them to the game, making your progress on the trail dependent on your physical activity. I am a full stack developer on this project, integrating Google APIs with our front-end application.";
+    "I worked on a small team with the head of the IT & Cybersecurity department at BYU doing mobile application development. We researched the effectiveness of the gamification of health data. The Eureka Trail uses real life steps that your phone tracks and syncs them to the game, making your progress on the trail dependent on your physical activity. I was a full stack developer on this project, integrating Google APIs with our front-end application, and making modifications to the backend code.";
 
 const maupinHomesDescription =
     "I was hired freelance to develop a business website for Maupin Homes, LLC. They are a contracting business for building custom homes, and until now have had no internet presence. I designed and developed their customer-facing website with robust designs and features to engage and attract customers. Between beginning specs, revisions, reviews, and completion, this project lasted just under a month.";
@@ -51,3 +57,5 @@ const byuUrl = "https://itc.byu.edu/information-technology-major";
 const goatnotesUrl = "http://goatnotes.net";
 const writenowUrl = "https://joinwritenow.com";
 const maupinHomesUrl = "https://maupinhomesco.com";
+const deltaAppsUrl = "https://deltaapps.netlify.app";
+const sayloUrl = "https://sayloinnovations.com";

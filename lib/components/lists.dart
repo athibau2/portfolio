@@ -74,8 +74,13 @@ class Skill {
 class HomeImage {
   static List<HomeImage> homeImages() => [
         HomeImage("assets/byu-logo.png", Colors.transparent, BoxShape.circle),
-        HomeImage("assets/icons/eureka-logo.png", Colors.white, BoxShape.circle),
-        HomeImage("assets/maupin-homes.png", Colors.transparent, BoxShape.rectangle),
+        HomeImage(
+            "assets/icons/eureka-logo.png", Colors.white, BoxShape.circle),
+        HomeImage(
+            "assets/delta-apps.png", Colors.transparent, BoxShape.rectangle),
+        HomeImage("assets/saylo.png", Colors.transparent, BoxShape.circle),
+        HomeImage(
+            "assets/maupin-homes.png", Colors.transparent, BoxShape.rectangle),
         HomeImage("assets/sava.png", Colors.transparent, BoxShape.circle),
         // HomeImage("assets/kings-peak.png", Colors.transparent, BoxShape.circle),
         HomeImage("assets/creators.png", Colors.white, BoxShape.circle),

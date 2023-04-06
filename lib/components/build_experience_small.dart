@@ -33,6 +33,230 @@ class BuildExperienceSmall extends StatelessWidget {
                 ),
               ),
 
+              /// SAYLO INNOVATIONS
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: Image.asset('assets/saylo.png').image,
+                            fit: BoxFit.contain),
+                      ),
+                      height: 250,
+                      width: 250,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      decoration: listDecoration,
+                      width: width * 0.7,
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Saylo Innovations",
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            Text(
+                              "April 2023 - Present",
+                              style: Theme.of(context).textTheme.subtitle2,
+                            ),
+                            Divider(),
+                            Text(
+                              sayloDescription,
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset(
+                                    "assets/icons/flutter-logo.png",
+                                    scale: 3.6,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/typescript-logo.png",
+                                    scale: 4,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/node-logo.png",
+                                    scale: 2.5,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/postgres-logo.png",
+                                    scale: 1.3,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/firebase-logo.png",
+                                    scale: 3.6,
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  const FaIcon(
+                                    FontAwesomeIcons.aws,
+                                    size: 35,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(sayloUrl)) {
+                                        throw 'Could not launch $sayloUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              /// DELTA APPS
+              SingleChildScrollView(
+                padding: EdgeInsets.all(30),
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                            image: Image.asset('assets/delta-apps.png').image,
+                            fit: BoxFit.contain),
+                      ),
+                      height: 200,
+
+                      /// changed from 250
+                      width: 250,
+                    ),
+                    // const SizedBox(
+                    //   height: 10,
+                    // ),
+                    Container(
+                      decoration: listDecoration,
+                      width: width * 0.7,
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Delta Apps",
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            Text(
+                              "November 2022 - Present",
+                              style: Theme.of(context).textTheme.subtitle2,
+                            ),
+                            const Divider(),
+                            Text(
+                              deltaAppsDescription,
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset(
+                                    "assets/icons/vue-logo.png",
+                                    scale: 70,
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/nuxt.png",
+                                    scale: 20,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/javascript-logo.png",
+                                    scale: 7.2,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/flutter-logo.png",
+                                    scale: 3.6,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Image.asset(
+                                    "assets/icons/postgres-logo.png",
+                                    scale: 1.3,
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  const FaIcon(
+                                    FontAwesomeIcons.aws,
+                                    size: 35,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () async {
+                                      if (!await launch(deltaAppsUrl)) {
+                                        throw 'Could not launch $deltaAppsUrl';
+                                      }
+                                    },
+                                    child: const Text("View Site"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /// THE EUREKA TRAIL
               SingleChildScrollView(
                 padding: EdgeInsets.all(30),
