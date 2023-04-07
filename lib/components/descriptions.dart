@@ -57,5 +57,5 @@ const byuUrl = "https://itc.byu.edu/information-technology-major";
 const goatnotesUrl = "http://goatnotes.net";
 const writenowUrl = "https://joinwritenow.com";
 const maupinHomesUrl = "https://maupinhomesco.com";
-const deltaAppsUrl = "https://deltaapps.netlify.app";
+const deltaAppsUrl = "https://deltaapps.dev";
 const sayloUrl = "https://sayloinnovations.com";
